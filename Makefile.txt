@@ -1,0 +1,11 @@
+all: matrix.o main.o
+	g++ -std=c++11 matrix.o main.o
+
+matrix.o: matrix.cpp matrix.h
+	g++ -std=c++11 -c matrix.cpp
+
+main.o: main.cpp
+	g++ -std=c++11 -c main.cpp 
+
+clean:
+	rm matrix.o main.o a.out
